@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html data-ng-app="app" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Test page</title>
+
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+            display: none!important;
+        }
+    </style>
+    <!-- vendor css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/my-styles.css">
+  </head>
+
+  <body>
+    <h1>Test UI</h1>
+
+    <div class="container"  data-ng-controller="Controller as ctrl">
+        <section>
+                <p class="text-center">VIDEO STREAM ANGULARJS</p>
+                <div id="mjpeg">
+                    <div id="webgl-canvas"></div>
+                </div>
+        </section>
+    </div>
+
+    <script src="vendor/angular.js"></script>
+    <!-- library to webgl -->
+    <script src="vendor/three.min.js"></script>
+    <!-- To control world 3D -->
+    <script src="vendor/OrbitControls.js"></script>
+    <!-- To use objects .stl -->
+    <script src="vendor/STLoader.js"></script>
+
+    <script src="app/app.module.js"></script>
+    <script src="app/stream-service.js"></script>
+    <script src="app/draw-service.js"></script>
+    
+    <script src="app/controller.js"></script>    
+    
+
+  </body>
+</html>
